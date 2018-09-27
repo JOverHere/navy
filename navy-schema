@@ -1,0 +1,55 @@
+SELECT 'hello, PG';
+
+   CREATE TABLE fleet (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR
+);
+
+INSERT INTO fleet (id, name)
+  VALUES ('01', 'Lincoln');
+INSERT INTO fleet (id, name)
+  VALUES ('02', 'Gandhi');
+
+   CREATE TABLE ship (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR,
+  date_built VARCHAR
+);
+
+INSERT INTO ship (id, name, date_built)
+  VALUES ('01', 'Esmeralda', '1989');
+INSERT INTO ship (id, name, date_built)
+  VALUES ('02', 'Bob', '1998');
+
+    CREATE TABLE sailor (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR,
+  date_of_birth VARCHAR
+);
+
+INSERT INTO sailor (id, name, date_of_birth)
+  VALUES ('01', 'Jeremy', '1979');
+INSERT INTO sailor (id, name, date_of_birth)
+  VALUES ('02', 'Vincent', '1982');
+
+    CREATE TABLE assignment(
+  id SERIAL PRIMARY KEY,
+  name VARCHAR,
+  start_date VARCHAR,
+  end_date VARCHAR
+);
+
+INSERT INTO assignment (id, start_date, end_date)
+  VALUES ('01', '1998', '2002');
+INSERT INTO assignment (id, start_date, end_date)
+  VALUES ('02', '2001', '2005');
+
+     CREATE TABLE rank(
+  id SERIAL PRIMARY KEY,
+  name VARCHAR,
+);
+
+     INSERT INTO rank (id, name)
+  VALUES ('01', 'Vincent');
+INSERT INTO rank (id, name)
+  VALUES ('02', 'Jeremy');
